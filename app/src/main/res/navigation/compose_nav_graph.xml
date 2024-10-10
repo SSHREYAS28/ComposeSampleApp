@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/compose_nav_graph"
+    app:startDestination="@id/composeNavigationFragment">
+
+    <fragment
+        android:id="@+id/composeNavigationFragment"
+        android:name="com.example.composesampleapp.ComposeNavigationFragment"
+        android:label="ComposeNavigationFragment" >
+        <action
+            android:id="@+id/action_composeNavigationFragment_to_launchTabFragment"
+            app:destination="@id/launchTabFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/launchTabFragment"
+        android:name="com.example.composesampleapp.LaunchTabFragment"
+        android:label="launch_tab_fragment"
+        tools:layout="@layout/launch_tab_fragment" />
+</navigation>
