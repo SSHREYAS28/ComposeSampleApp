@@ -8,8 +8,10 @@ import androidx.compose.ui.platform.ViewCompositionStrategy
 import androidx.fragment.app.Fragment
 import com.example.composesampleapp.databinding.LaunchTabFragmentBinding
 import com.example.mylibrary.TabBarScreen
+import com.philips.filament.themes.DlsTheme
+import com.philips.filament.themes.color.DlsThemeColor
 
-class LaunchTabFragment: Fragment() {
+class LaunchTabFragment : Fragment() {
 
     private lateinit var binding: LaunchTabFragmentBinding
 
@@ -23,7 +25,11 @@ class LaunchTabFragment: Fragment() {
         binding.composeView.apply {
             setViewCompositionStrategy(ViewCompositionStrategy.DisposeOnViewTreeLifecycleDestroyed)
             setContent {
-                TabBarScreen()
+                DlsTheme(
+                    baseColor = DlsThemeColor.Blue,
+                ) {
+                    TabBarScreen()
+                }
             }
         }
 

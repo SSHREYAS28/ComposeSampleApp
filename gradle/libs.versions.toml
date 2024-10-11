@@ -1,43 +1,55 @@
 [versions]
-agp = "8.6.0"
-kotlin = "1.9.0"
-coreKtx = "1.13.1"
-junit = "4.13.2"
-junitVersion = "1.2.1"
-compose-bom = "2024.06.00"
-espressoCore = "3.6.1"
+core = "1.13.1"
 appcompat = "1.7.0"
+junit = "4.13.2"
+coroutines-test = "1.7.3"
+agp = "8.1.4"
+kotlin = "1.9.0"
+filament = "1.0.10"
+compose-bom = "2024.06.00"
+compose-activity = "1.9.0"
+lifecycle-ktx = "2.8.3"
+lifecycle-compose = "2.7.0"
+compose-vm = "2.8.3"
+compose-navigation = "2.7.7"
+systemuicontroller = "0.30.1"
+fragment-ktx = "1.8.1"
+navigation-fragment = "2.7.7"
+mockk = "1.13.7"
+hilt-navigation = "1.2.0"
 material = "1.12.0"
-activity = "1.9.2"
-constraintlayout = "2.1.4"
-navigationRuntimeKtx = "2.8.2"
-navigationFragmentKtx = "2.8.2"
-uiAndroid = "1.7.3"
-foundationLayoutAndroid = "1.7.3"
-runtimeAndroid = "1.7.3"
-storage = "1.5.0"
+hilt = "2.48"
+gson = "2.10.1"
+compose-junit = "1.6.8"
 
 [libraries]
-androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
-androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
-androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+filament = { group = "com.philips.filament", name = "filament", version.ref = "filament" }
 androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "compose-bom" }
+androidx-compose-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
+androidx-compose-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
 androidx-compose-material = { group = "androidx.compose.material3", name = "material3" }
 androidx-compose-material-window = { group = "androidx.compose.material3", name = "material3-window-size-class" }
-androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
-material = { group = "com.google.android.material", name = "material", version.ref = "material" }
-androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
-androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
-androidx-navigation-runtime-ktx = { group = "androidx.navigation", name = "navigation-runtime-ktx", version.ref = "navigationRuntimeKtx" }
-androidx-navigation-fragment-ktx = { group = "androidx.navigation", name = "navigation-fragment-ktx", version.ref = "navigationFragmentKtx" }
-androidx-ui-android = { group = "androidx.compose.ui", name = "ui-android", version.ref = "uiAndroid" }
-androidx-foundation-layout-android = { group = "androidx.compose.foundation", name = "foundation-layout-android", version.ref = "foundationLayoutAndroid" }
-androidx-runtime-android = { group = "androidx.compose.runtime", name = "runtime-android", version.ref = "runtimeAndroid" }
-androidx-storage = { group = "androidx.test.services", name = "storage", version.ref = "storage" }
-
+androidx-compose-activity = { group = "androidx.activity", name = "activity-compose", version.ref = "compose-activity" }
+androidx-lifecycle-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycle-ktx" }
+androidx-lifecycle-compose = { group = "androidx.lifecycle", name = "lifecycle-runtime-compose", version.ref = "lifecycle-compose" }
+androidx-compose-vm = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-compose", version.ref = "compose-vm" }
+androidx-compose-nav = { group = "androidx.navigation", name = "navigation-compose", version.ref = "compose-navigation" }
+systemuicontroller = { group = "com.google.accompanist", name = "accompanist-systemuicontroller", version.ref = "systemuicontroller" }
+androidx-fragment-ktx = { group = "androidx.fragment", name = "fragment-ktx", version.ref = "fragment-ktx" }
+androidx-navigation = { group = "androidx.navigation", name = "navigation-fragment", version.ref = "navigation-fragment" }
+androidx-navigation-ktx = { group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "navigation-fragment" }
+androidx-compose-junit = { group = "androidx.compose.ui", name = "ui-test-junit4", version.ref = "compose-junit" }
+org-jetbrains-kotlinx = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "coroutines-test" }
+mockk = { group = "io.mockk", name = "mockk", version.ref = "mockk" }
+hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
+hilt-navigation-compose = { group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "hilt-navigation" }
+hilt-navigation-fragment = { group = "androidx.hilt", name = "hilt-navigation-fragment", version.ref = "hilt-navigation" }
+gson = { group = "com.google.code.gson", name = "gson", version.ref = "gson"}
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 android-library = { id = "com.android.library", version.ref = "agp" }
-

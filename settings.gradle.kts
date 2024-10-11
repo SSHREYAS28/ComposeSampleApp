@@ -16,6 +16,10 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+
+        maven {
+            url = uri("https://artifactory-ehv.ta.philips.com:443/artifactory/dl-innersource-mvn-release/")
+        }
     }
 }
 
